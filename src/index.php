@@ -131,12 +131,14 @@
                 $m1 += $v[0]["Egg"];
                 $m2 += $v[1]["Egg"];
                 $m3 += $v[2]["Egg"];
+                
               
             
             }
+            
             // echo "".$m1 .$m2 .$m3. "";
-            echo(max($m1,$m2,$m3) . "<br>");
-            echo "<h3>   Quarter with maximum sale of Egg  is in quarter2 =  1667 </h3>";
+            $ans1=(max($m1,$m2,$m3) . "<br>");
+            echo "<h3>   Quarter with maximum sale of Egg  is in quarter2 = ".$ans1."  </h3>";
          
 
             foreach($location as $k =>$v )
@@ -146,8 +148,20 @@
             $m6 += $v[2]["Milk"];
           
           }
-          echo (min($m4,$m5,$m6) ."" );
-          echo "<h3>minimum consumption of Milk is in mumbai : 1267 </h3>";
+          $ans2 =  (min($m4,$m5,$m6) ."" );
+          if($ans2 == $m4)
+          {
+            echo "<h3>minimum consumption of Milk is in location kolkata  ".$ans2."</h3>";
+          }
+          else if($ans2 == $m5)
+          {
+            echo "<h3>minimum consumption of Milk is in location delhi ".$ans2." </h3>";
+          }
+          elseif ($ans2 == $m6)
+          {
+            echo "<h3>minimum consumption of Milk is in location mumbai ".$ans2." </h3>";
+          }
+        
 
 
           foreach($location as $k => $v)
